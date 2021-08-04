@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página Principal - Academia" />
+    <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript" />
+    <meta name="author" content="Diana Salazar Murillo" />
+    <title>CORALART</title>
+    <link rel="icon" type="image/png" href="img/icon.png" />
+
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no, initial-scale=1,maximum-scale=1.0, minimum-scale=1.0">
+
+    <!--JQuery-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--API MAPS-->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyA1GPewWH0N6pDnZjcya-c85hBLf4xMN2s">
+        </script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/ubicacion.css">
+
+</head>
+
+<body>
+
+    <div class="contenedorprimario">
+        <header>
+            <div class="header">
+
+                <div id="titulo">
+                    <h1>
+                        <img src="img/peces - left.png" alt="mariposas" width="100px" />
+                        CORALART
+                        <img src="img/peces - rigth.png" alt="mariposas" width="100px" />
+                    </h1>
+                </div>
+
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav text-center">
+                            <a href="home.html" class="nav-item nav-link active">Inicio</a>
+
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Artesanías</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="movilmadera.html">Móviles de
+                                        madera</a>
+                                    <a class="dropdown-item" href="joyeria.html">Colgantes
+                                        para joyeria</a>
+                                    <a class="dropdown-item" href="tazas.html">Tazas
+                                        personalizadas</a>
+                                    <a class="dropdown-item" href="tatuajes.html">Tatuajes
+                                        en henna</a>
+                                    <a class="dropdown-item" href="otras.html">Otras artesanías</a>
+                                </div>
+                            </div>
+                            <a href="conocenos.html" class="nav-item nav-link active">Conócenos</a>
+                            <a href="contacto.html" class="nav-item nav-link active">Contacto</a>
+                            <a href="informacion.html" class="nav-item nav-link active">Información</a>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+
+        <div id="contenedorprincipal">
+
+            <main id="site_content">
+                <div class="ubicacion">
+
+                    <h3 class="tituloinicial"> Nuestra ubicación </h3>
+                    <h3 class="textoubicacion"> Sarchí Norte, Alajuela, Costa Rica. </h3>
+                    <h2 class="titulo"> Distancia </h2>
+                    <!--Panel para agregar la información de la ubicación-->
+                    <div class="panel-body" id="distancia">
+                    </div>
+                </div>
+
+                <div class="container map-container">
+                    <div id="map" style="height: 100%; width: 100%;" class="mapa"> </div>
+                </div>
+
+                <!--JavaScritp ubicación-->
+                <script type="text/javascript" src="js/ubicacion.js"></script>
+
+            </main>
+        </div>
+
+
+        <div id="foot">
+            <footer>
+
+                <br>
+                <h2>Coralart</h2>
+                <p> Servicio al cliente
+                    <br>
+                    WhatsApp: +506 615 383 72 | Correo: bren13mc95@gmail.com
+                    <br>
+                    <a href="home.html">Inicio</a> | <a href="conocenos.html">Conócenos</a> |
+                    <a href="contacto.html">Contacto</a> | <a href="informacion.html">Info</a>
+                    | <a href="autor.html">Autor</a> | <a href="#">Ubicación</a>
+                    <br>
+                    Copyright &copy; 2021 | Diana Salazar Murillo
+                </p>
+
+            </footer>
+        </div>
+    </div>
+
+    <!--íconos-->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

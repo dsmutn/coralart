@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página Principal - Academia" />
+    <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript" />
+    <meta name="author" content="Diana Salazar Murillo" />
+    <title>CORALART</title>
+    <link rel="icon" type="image/png" href="img/icon.png" />
+
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no, initial-scale=1,maximum-scale=1.0, minimum-scale=1.0">
+
+    <!--JQuery-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!--Boostrap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/contacto.css">
+
+    <!--JavaScritp-->
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    <script src="js/formulario.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedorprimario">
+        <header>
+            <div class="header">
+
+                <div id="titulo">
+                    <h1>
+                        <img src="img/peces - left.png" alt="mariposas" width="100px" />
+                        CORALART
+                        <img src="img/peces - rigth.png" alt="mariposas" width="100px" />
+                    </h1>
+                </div>
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav text-center">
+                            <a href="home.html" class="nav-item nav-link active">Inicio</a>
+
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Artesanías</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="movilmadera.html">Móviles de
+                                        madera</a>
+                                    <a class="dropdown-item" href="joyeria.html">Colgantes
+                                        para joyeria</a>
+                                    <a class="dropdown-item" href="tazas.html">Tazas
+                                        personalizadas</a>
+                                    <a class="dropdown-item" href="tatuajes.html">Tatuajes
+                                        en henna</a>
+                                    <a class="dropdown-item" href="otras.html">Otras artesanías</a>
+                                </div>
+                            </div>
+                            <a href="conocenos.html" class="nav-item nav-link active">Conócenos</a>
+                            <a href="#" class="nav-item nav-link active">Contacto</a>
+                            <a href="informacion.html" class="nav-item nav-link active">Información</a>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+
+        <div id="contenedorprincipal">
+
+            <main id="site_content">
+
+                <article id="content">
+
+                    <form name="formulario" method="post" class="form_contact">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Nombre</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="nombre" placeholder="Digite su nombre">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Apellidos</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="apellidos"
+                                    placeholder="Digite sus apellidos">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Fecha de nacimiento</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="fecha" required>
+                            </div>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            Género
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femenino"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Femenino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="masculino"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Masculino</label>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="email" required
+                                    placeholder="Digite su email">
+                                <span id="esValido" style="font-weight: bold;"></span>
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Mensaje</label>
+                            <div class="col-sm-10">
+                                <textarea rows="4" id="mensaje" name="mensaje" required class="form-control"
+                                    placeholder="Cuéntanos sobre el diseño que deseas"></textarea>
+                            </div>
+                        </div>
+                        <!--Envío del formulario con java script-->
+                        <center><input type="button" value="  Enviar mensaje  " onclick="sendEmail()" /></center>
+                    </form>
+                </article>
+
+                <div id="sidebar_container">
+
+                    <aside class="sidebar">
+                        <center><img src="img/informacion.png" alt="entrega" width="120px" /></center>
+                        <br>
+                        <h5>Horario de atención</h5>
+                        <p>Lunes a Viernes de 10:00am - 5:00pm</p>
+                        <h5>Correo electrónico</h5>
+                        <p>bren13mc95@gmail.com</p>
+                        <h5>WhatsApp</h5>
+                        <p>+506 615 383 72</p>
+
+                        <a onClick="window.open('img/QR.png','','height=375,width=375,scrollbars=yes,resizable=no,toolbars=no,menubar=no,status=no,location=no, top= 100%, left=450%')"
+                            target="_self" style="cursor: pointer">
+                            <button class="btn btn-secondary" type="button" data-toggle="dropdown"> Código
+                                QR</button></a>
+
+                        
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <center> <a id="llamada" class="btn btn-success"><i class="fas fa-phone-volume"></i> &nbsp;
+                                    Llamar al vendedor</a></center>
+                        </div>
+
+                    </aside>
+                </div>
+
+            </main>
+        </div>
+
+
+        <div id="foot">
+            <footer>
+
+                <br>
+                <h2>Coralart</h2>
+                <p> Servicio al cliente
+                    <br>
+                    WhatsApp: +506 615 383 72 | Correo: bren13mc95@gmail.com
+                    <br>
+                    <a href="home.html">Inicio</a> | <a href="conocenos.html">Conócenos</a> |
+                    <a href="#">Contacto</a> | <a href="informacion.html">Info</a>
+                    | <a href="autor.html">Autor</a> | <a href="ubicacion.html">Ubicación</a>
+                    <br>
+                    Copyright &copy; 2021 | Diana Salazar Murillo
+                </p>
+
+            </footer>
+        </div>
+    </div>
+
+    <!--íconos-->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+    <!--JavaScript para validar el email-->
+    <script>
+        document.getElementById('email').addEventListener('input', function () {
+            validarEmail(document.formulario.email.value);
+        });
+    </script>
+
+    <!--JQuery para llamada-->
+    <script>
+        $(document).ready(function () {
+            $("#llamada").on('click', function () {
+                $("#llamada").prop("href", "tel:+50661538372");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
