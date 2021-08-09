@@ -52,8 +52,8 @@ function fn_ok(respuesta) {
     }
 
     var objConfigDS = {
-        origin: gLatLonFijo,
-        destination: gLatLonUsuario,
+        origin: gLatLonUsuario,
+        destination: gLatLonFijo,
         travelMode: google.maps.TravelMode.DRIVING
     }
 
